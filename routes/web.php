@@ -11,14 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/inicio', 'InicioController@index');
+Route::get('/mantener','MantenerGastosController@mantenerGastos');
+//Route::get('/detallePelicula/{id}','movieController@show');
 
 
-Route::get('/inicio', function () {
-    return view('inicio');
-});
 
 
 

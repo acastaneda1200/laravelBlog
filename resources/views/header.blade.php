@@ -820,10 +820,10 @@
 				<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
 					<!-- BEGIN: Aside Menu -->
 	<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500">
-							<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">}
+							<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 								<!-- Listado del Menu -->
 									<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
-											<a href="index.html" class="m-menu__link ">
+											<a href="{{url ('inicio')}}" class="m-menu__link ">
 												<i class="m-menu__link-icon flaticon-line-graph"></i>
 												<span class="m-menu__link-title">
 													<span class="m-menu__link-wrap">
@@ -836,7 +836,7 @@
 											</a>
 										</li>
 										<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
-												<a href="index.html" class="m-menu__link ">
+										<a href="{{url ('mantener')}}" class="m-menu__link ">
 													<i class="m-menu__link-icon flaticon-list-3"></i>
 													<span class="m-menu__link-title">
 														<span class="m-menu__link-wrap">
@@ -875,45 +875,9 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title m-subheader__title--separator">
-									Base Controls
+									{{$routeName}}
 								</h3>
-								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
-									<li class="m-nav__item m-nav__item--home">
-										<a href="#" class="m-nav__link m-nav__link--icon">
-											<i class="m-nav__link-icon la la-home"></i>
-										</a>
-									</li>
-									<li class="m-nav__separator">
-										-
-									</li>
-									<li class="m-nav__item">
-										<a href="" class="m-nav__link">
-											<span class="m-nav__link-text">
-												Forms
-											</span>
-										</a>
-									</li>
-									<li class="m-nav__separator">
-										-
-									</li>
-									<li class="m-nav__item">
-										<a href="" class="m-nav__link">
-											<span class="m-nav__link-text">
-												Form Controls
-											</span>
-										</a>
-									</li>
-									<li class="m-nav__separator">
-										-
-									</li>
-									<li class="m-nav__item">
-										<a href="" class="m-nav__link">
-											<span class="m-nav__link-text">
-												Base Inputs
-											</span>
-										</a>
-									</li>
-								</ul>
+						
 							</div>
 							<div>
 								<div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
@@ -982,30 +946,19 @@
 					<!-- END: Subheader -->
 					<div class="m-content">
 						<div class="row">
-							<div class="col-md-6">
-								<!--begin::Portlet-->
 							
-								<!--end::Portlet-->
-		
-		<!--begin::Portlet-->
-							
-					<!--end::Form-->
-				</div>
+								@yield('contenido')
+				
 				<!--end::Portlet-->
 		<!--begin::Portlet-->
 				
 				<!--end::Portlet-->
-			</div>
+						</div>
 		</div>
 	</div>
 </div>
 </div>
 
-
-
-    <div class="container">
-    @yield('contenido')
-    </div>
 </body>
 
 <script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
